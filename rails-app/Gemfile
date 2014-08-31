@@ -1,0 +1,65 @@
+source "https://rubygems.org"
+
+gem 'rails', '4.1.0'
+
+gem 'pg'
+gem "haml-rails"
+gem "simple_form"
+
+group :assets do
+  gem 'font-awesome-rails'
+  gem 'less-rails'
+  gem 'libv8'
+  gem 'therubyracer'
+end
+
+gem 'remotipart', '~> 1.0'
+gem 'twitter-bootstrap-rails'
+gem "airbrake"
+
+
+
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "capistrano"
+  gem 'quiet_assets'
+  gem "rails-erd"
+
+end
+
+group :developent, :test do
+  gem 'spring-commands-rspec'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
+
+  # gem "mailcatcher"
+  gem 'powder'
+end
+
+gem 'unicorn'
+# gem 'thin'
+
+
+
+gem 'ruby_parser', :group => :development
+#gem 'bootstrap-sass' # bootstrap twitter
+
+
+
+
+
+gem 'awesome_print', :group => [ :development, :test ]
+gem 'rails_best_practices', :group => [ :development, :test ]
+
+
+
+# gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git'
+
+gem "devise"
+gem "cancan"
+
+gem 'newrelic_rpm'
+

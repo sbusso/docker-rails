@@ -1,0 +1,13 @@
+db:
+  image: sbusso/postgresql
+  ports:
+    - 5432
+web:
+  build: .
+  command: bundle exec rackup -p 3000
+  volumes:
+    - /home/core/docker/rails-app:/www
+  ports:
+    - 3000:3000
+  links:
+    - db
