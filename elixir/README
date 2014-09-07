@@ -1,0 +1,4 @@
+```
+docker build -t elixir
+docker run -i -t --rm elixir iex
+``
