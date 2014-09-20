@@ -1,5 +1,7 @@
 # Ruby on Rails Dockerfiles
 
+## For Mac OS X
+
 Using Vagrant and Docker shell
 
 ```
@@ -20,10 +22,17 @@ mv user-data.sample user-data # edit file
 # share folder -> config.vm.synced_folder "/Users/sbusso/workspaces/docker/dockerfiles", "/home/core/docker", id: "docker", :nfs => true, :mount_options => ['nolock,vers=3,udp']
 
 vagrant up # provision
+```
+
+
+```
 
 rake build
 
-sudo gem install bundler fig2coreos
+gem install bundler fig2coreos
+
+curl -L https://github.com/docker/fig/releases/download/0.5.2/darwin > /usr/local/bin/fig
+chmod +x /usr/local/bin/fig
 
 fig run web rails new . --git option and a --database=postgresql --skip-gemfile -q -B
 
