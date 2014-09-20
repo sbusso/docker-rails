@@ -21,6 +21,8 @@ mv user-data.sample user-data # edit file
 
 vagrant up # provision
 
+rake build
+
 sudo gem install bundler fig2coreos
 
 fig run web rails new . --git option and a --database=postgresql --skip-gemfile -q -B
