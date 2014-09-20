@@ -36,6 +36,10 @@ chmod +x /usr/local/bin/fig
 
 fig run web rails new . --git option and a --database=postgresql --skip-gemfile -q -B
 
+# or if application exists
+
+fig run web rake db:setup
+
 ```
 
 ```
