@@ -20,4 +20,5 @@ RUN git checkout v1.0.0-rc1 && make && make install
 
 # Clean up APT and temporary files when done
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-WORKDIR /home/deployer
+
+WORKDIR /home/
